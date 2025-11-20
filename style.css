@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    height: 70px;
+    background-color: black;
+}
+
+nav {
+    color: white;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.left {
+    height: 100%;
+
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.right a {
+    text-decoration: none;
+    padding: 10px 25px;
+    color: white;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.right a:hover {
+    color: #F78FB7;
+}
+
+nav #name {
+    font-size: 22px;
+}
+
+nav img {
+    margin-right: 15px;
+    border: 1.5px solid white;
+    border-radius: 15px;
+    height: 120%;
+}
+
+
+
+main {
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.808)),
+        url('imagens/fundo2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.principal {
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.subtitulo {
+    display: inline-block;
+
+    border: 1px solid #F78FB7;
+    border-radius: 22px;
+    background-color: #f78fb741;
+    color: #F78FB7;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 8px;
+    margin-bottom: 23px;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: bold;
+    margin-bottom: 23px;
+}
+
+.descricao {
+    color: rgb(216, 216, 216);
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    margin-bottom: 42px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 42px;
+}
+
+.bt {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: normal;
+    border: 2px solid transparent;
+    transition: .2s;
+}
+
+.bt.rosa {
+    background: #F78FB7;
+    color: rgb(0, 0, 0);
+}
+
+.bt.rosa:hover {
+    background: #fa82b0;
+}
+
+.bt.branco {
+    color: rgb(255, 255, 255);
+    border: 1.5px solid white;
+    background: rgba(255, 255, 255, 0.342);
+}
+
+.bt.branco:hover {
+    color: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.438);
+}
+
+.infos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+    color: white;
+    font-size: 18px;
+}
+
+.infos img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.infos li {
+    width: 250px;
+    padding: 15px 10px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+}
+
+.infos h1 {
+    font-size: 32px;
+}
+
+.infos p {
+    color: rgb(219, 219, 219);
+}
+
+@media (max-width: 600px) {
+
+    /* Ajusta o header */
+    nav {
+        padding: 10px;
+    }
+
+    #name {
+        font-size: 18px;
+    }
+
+    nav img {
+        height: 45px;
+        margin-right: 8px;
+    }
+
+    .right {
+        gap: 10px;
+    }
+
+    .right a {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    /* Conteúdo principal */
+    h1 {
+        font-size: 34px; /* menor no celular */
+    }
+
+    .subtitulo {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .descricao {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .botoes {
+        flex-direction: column;   /* botões um embaixo do outro */
+        gap: 12px;
+    }
+
+    .bt {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Cards de informações */
+    .infos {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .infos li {
+        width: 90%;        /* ocupar quase toda a largura */
+        padding: 20px 15px;
+    }
+
+    .infos h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .descricao {
+        font-size: 17px;
+    }
+
+    .infos {
+        gap: 20px;
+    }
+
+    .infos li {
+        width: 200px;
+    }
+}
